@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+class clsPerson
+{
+private: // only accessible inside this class
+    string _FirstName;
+    string _LastName;
+    int _id=10;
+public:
+    void setid(int id)
+    {
+        _id = id;
+    }
+    int getid()
+    {
+        return _id;
+    }
+    void setFirstName(string firstName)
+    {
+        _FirstName = firstName;
+    }
+    void setLasttName(string LasttName)
+    {
+        _LastName = LasttName;
+    }
+    string getfirstname()
+    {
+        return _FirstName;
+    }
+    string getLastname()
+    {
+        return _LastName;
+    }
+    string fullname()
+    {
+        return _FirstName + " " + _LastName;
+    }
+
+
+};
+
+int main()
+{
+    clsPerson Person1;
+    Person1.setFirstName("omar");
+    cout << Person1.getfirstname();
+}
